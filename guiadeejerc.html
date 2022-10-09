@@ -1521,11 +1521,10 @@
             var numeros = []
             while (i<=2) {
                 var tel = prompt("Ingrese un número de teléfono siguiendo estas indicaciones: [0-9]{3}-[0-9]{2}-[0-9]{3}")
-                if (tel.match(/[0-9]{3}-[0-9]{2}-[0-9]{3}/)) {
-                    numeros.push(new Telefono (tel,i+1))
+                if (tel.match(/[0-9]{3}-[0-9]{2}-[0-9]{3}$/)) {
+                    numeros.push(new Telefono (tel))
                     numeros[i].llamados()
                 }
-                
                 i++
             }
             console.log(numeros)
